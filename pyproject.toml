@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "more_itertools_test"
+version = "0.1.0"
+description = "单元测试与测试管理实验项目"
+authors = [{ name = "王亮", email = "2399190317@qq.com" }]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = "test_*.py"
+addopts = "-v --junitxml=test-results.xml"

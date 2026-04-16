@@ -18,7 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e ".[test]"
 
-      - name: 运行测试集（实验要求：冒烟测试）
+      - name: 运行测试集
         run: python test_suite.py
 
       - name: 上传测试报告

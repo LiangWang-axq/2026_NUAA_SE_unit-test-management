@@ -165,7 +165,7 @@ def chunked(iterable, n, strict=False):
     list is yielded.
 
     """
-    iterator = iter(partial(take, n-1, iter(iterable)), [])
+    iterator = iter(partial(take, n-1, iter(iterable)), []) # 缺陷位置(n->n-1)
     if strict:
         if n is None:
             raise ValueError('n must not be None when using strict mode.')
